@@ -240,16 +240,11 @@ class TodoListEntryController extends Controller {
 
         $params = [
             "Content-Type: application/x-www-form-urlencoded",
-            //"client_id" => "0c331368-cc2c-4c80-b73e-97f26f3adad7",
             "client_id" => $outlookClientInfo->outlook_client_id,
             "scope" => "Calendars.ReadWrite offline_access",
-            //"client_secret" => "MDJ8Q~yOXLv270V.w7MApwUNzmPHvIquZhtDnawz",
             "client_secret" => $outlookClientInfo->outlook_client_secret,
             "grant_type" => "refresh_token",
             "refresh_token" => $refresh_token
-            //"redirect_uri" => "http://localhost:8000/to_do_list_entry",
-            //"state" => "12345",
-            //"code" => "0.AVkA1Vy7vVrcGUyCBg364o7KjmQENvX96RROk1TF5LF7q35ZACA.AgABAAIAAAD--DLA3VO7QrddgJg7WevrAgDs_wQA9P_WQ4IJihkMPhCJIvnv0H7IVff_S49aRXm7plo277ydOmipOKFKfu_W-9fcEfo23HL8HR7oaqpiZ_gKEUuEcwMj1uDxWUdiDTatchcPf5a108EwhbDBFo2vJwb3IGjjUHby-Chhbw2I-JXlUIF-x9CA1MQ7ZBpGlelxh-h16wuNTew7fW1BufvzhbEmI10Cglw96wHwVOjY9zpgtDvYNm1pqR3ryNKFKgKtZTaS1IXuCzKherRv7lIP767CgXQkgEE733S1lMLqSF48Mf1akSG6a4YoiMinpqIibf78xmdkHHgS7p9lZqn1S-PZnZHMnX-utUHzuB7p5Wj9Hh_BtkQFb57ui-MKRnED3SmXXBLu-EbynZXpG8DxjprkeiY3o7UPxOooWKMaETx-C8yy6OjcC5ketGZ4syzXWdgnT-QjhynCrTYtrPXKVHn14OyqVr3thJDArtSTV82ndAFFb0fv6dJhANXVkoHAAsknpfyd0jQkeYCG_XNavfu6loJYv150AXpcCoUDgJbEn0sbmNxDyKJlgbt01FV3xvujLYJ6Z4H-v56aebMSvN1nyPuK7I9oI3p7IVpyC87AXYgcjnXpHL40jtdw_oyn9TCloo_UKkL59GiPrry_UwJ7ldeOHmnUmV0k23UawaFxHXO54RJcLLkNs8h9zIIuIQdKiF6F"
             
         ];
 
@@ -703,13 +698,13 @@ function saveCalendar($client_id, $project_id, $task, $requestor_id, $preparer_i
 
         $params = [
             "Content-Type: application/x-www-form-urlencoded",            
-            "client_id" => "0c331368-cc2c-4c80-b73e-97f26f3adad7",
+            "client_id" => "ABC",
             "scope" => "Calendars.ReadWrite offline_access",
             "code" => $access_code,
             "state" => "12345",
             "redirect_uri" => "http://localhost:8000/master/access_code",
             "grant_type" => "authorization_code",
-            "client_secret" => "MDJ8Q~yOXLv270V.w7MApwUNzmPHvIquZhtDnawz",
+            "client_secret" => "ABC",
         ];
 
         $conn = curl_init();

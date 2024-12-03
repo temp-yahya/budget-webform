@@ -31,9 +31,9 @@ class SMSVarifyController extends Controller
     public function sendSMS(Request $request)
     {
        
-        $sid = "ACd9aaad21f58e9c03d30848010fe66cb2";
-        $token = "442a405d5adf156355ca00eccef025f6";
-        $twilioNumber = "+13203028600";
+        $sid = "ABC";
+        $token = "ABC";
+        $twilioNumber = "123";
 
         //電話番号取得
         $email = $request->email;
